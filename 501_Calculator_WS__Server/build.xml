@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="wsgen" default="gen" basedir=".">
+	<property file="server.properties"/>
+	<target name="gen">
+		<mkdir dir="${resrc}"/>
+		<exec executable="wsgen">
+			<arg value="-verbose"/>
+			<arg value="-classpath"/>
+			<arg value="bin"/>
+			<arg value="-d"/>
+			<arg value="bin"/>
+			<arg value="-wsdl"/>
+			<arg value="-r"/>
+			<arg value="${resrc}"/>
+			<arg value="-s"/>
+			<arg value="src"/>
+			<arg value="${sei}" />
+		</exec>
+	</target>
+</project>
+

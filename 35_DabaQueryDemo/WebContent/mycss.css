@@ -1,0 +1,38 @@
+#centeredcontent {
+	text-align: center
+}
+
+body {
+	text-align: center;
+	background-color: #ccccff;
+}
+
+table {
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+tr.trcolor1 {
+	background-color: #bbbbbb;
+	color: black;
+}
+
+tr.trcolor2 {
+	background-color: #eeeeee;
+	color: black;
+}
+
+th {
+	border: 2px solid black;
+	width: 140;
+}
+
+td {
+	border: 2px solid black;
+}
+

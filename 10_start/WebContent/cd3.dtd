@@ -1,0 +1,8 @@
+<!ELEMENT collectie (eigenaar,cd+)>
+<!ELEMENT eigenaar (#PCDATA)>
+<!ELEMENT cd (artiest,titel,jaar,uitgeleend?,lener?)>
+<!ELEMENT artiest (#PCDATA)>
+<!ELEMENT titel (#PCDATA)>
+<!ELEMENT jaar (#PCDATA)>
+<!ELEMENT uitgeleend (#PCDATA)>
+<!ELEMENT lener (#PCDATA)>

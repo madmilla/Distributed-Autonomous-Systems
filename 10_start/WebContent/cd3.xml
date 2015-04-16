@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="cd3.xsl"?>
+<!DOCTYPE collectie SYSTEM "cd3.dtd">
+
+<collectie>
+  <eigenaar>Piet</eigenaar>
+  <cd>	
+    <artiest>Henk</artiest>
+	<titel>HELP</titel>
+	<jaar>1990</jaar>
+	<lener>Jan</lener>
+  </cd>
+
+  <cd>
+	<artiest>Frits</artiest>
+	<titel>Goodbye</titel>
+	<jaar>2002</jaar>
+	<uitgeleend>nee</uitgeleend>
+  </cd>
+</collectie>
+

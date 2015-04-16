@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="wsimport" default="import" basedir=".">
+	<property file="client.properties" />
+	<property name="srcDir" location="src" />
+	<property name="binDir" location="bin" />
+	<target name="import">
+		<exec executable="wsimport">
+			<arg value="-verbose" />
+			<arg value="-keep" />
+			<arg value="-d" />
+			<arg value="${binDir}" />
+			<arg value="-s" />
+			<arg value="${srcDir}" />
+			<arg value="${wsdl_uri}" />
+		</exec>
+	</target>
+</project>
+

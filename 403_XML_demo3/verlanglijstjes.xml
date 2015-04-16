@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lijstStijl.xsl"?>
+<!DOCTYPE trekking SYSTEM "lijstjes.dtd">
+<trekking jaar="2011">
+  <lijstje>
+	<naam>Opa</naam>
+	<kado>Goede (Parker) pen</kado>
+	<kado>Briefpapier</kado>
+	<kado>Pijptabak</kado>
+  </lijstje>
+
+  <lijstje>
+	<naam>Pa</naam>
+	<kado>Bladmuziek voor de Piano van Chopin</kado>
+	<kado>Een nieuwe metronoom</kado>
+	<kado>Een brillensteun</kado>
+  </lijstje>
+
+  <lijstje>
+	<naam>Marieke</naam>
+	<kado>DVD-box het huis Anubis</kado>
+	<kado>CD-bon</kado>
+	<kado>Ketting, oorbellen, etc.</kado>
+	<kado>Frontje voor de mobiel</kado>
+	<kado>Doe maar wat leuks</kado>
+  </lijstje>
+
+  <lijstje>
+	<naam>Jeroen</naam>
+	<kado>Pre-paid kaar World of Warcraft</kado>
+	<kado>Game-toetsenbord </kado>
+  </lijstje>
+
+  <lijstje>
+	<naam>Ma</naam>
+	<kado>Kaarsen</kado>
+	<kado>Boekenbon</kado>
+	<kado>Dambord</kado>
+	<kado>Andere spelletjes</kado>
+  </lijstje>
+</trekking>

@@ -1,0 +1,6 @@
+<!ELEMENT trekking (lijstje+)>
+<!ELEMENT lijstje (naam,kado+)>
+<!ELEMENT naam (#PCDATA)>
+<!ELEMENT kado (#PCDATA)>
+
+<!ATTLIST trekking jaar CDATA #REQUIRED>

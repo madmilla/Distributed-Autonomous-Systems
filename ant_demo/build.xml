@@ -1,0 +1,61 @@
+<project name="swingdemo" default="jar" basedir=".">
+
+   <!-- set global properties for this build -->
+   <property name="srcDir"     location="src"/>
+   <property name="binDir"     location="bin"/>
+   <property name="jarDir"     location="lib"/>
+   <property name="main.class" value="swingdemo.SwingDemo"/>
+   <property name="jarfile"    value="${ant.project.name}.jar"/>
+
+   <target name="compile" 
+         description="compile the source " >
+      <!-- Compile the java code from ${srcDir} -->
+      <mkdir dir="${binDir}"/>
+      <javac srcdir="${srcDir}" includeantruntime = "false" 
+	                            destdir="${binDir}" 
+								debug="true">	      
+         <include name="**/*.java" />
+      </javac> 
+   </target>
+
+   <target name="jar" depends="compile"
+         description="generate the distribution" >
+
+      <!-- Put class-files into the jarfile -->
+      <mkdir dir="${jarDir}"/>
+      <jar destfile="${jarDir}/${jarfile}" 
+           basedir="${binDir}"
+           includes="**/*.class">
+    	   <manifest>
+               <attribute name="Main-Class"
+                         value="${main.class}"/>
+           </manifest>
+       </jar>
+   </target>
+
+   <target name="run" depends="jar">
+      <java classname="${main.class}"
+         fork="true"
+         classpath="${jarDir}/${jarfile}">
+      </java>
+    </target>
+
+   <target name="run2" depends="jar">
+      <java jar="${jarDir}/${jarfile}"
+         fork="true">
+      </java>
+   </target>
+
+   <target name="run3" depends="compile">
+      <java classname="${main.class}"
+         fork="true"
+         classpath="${binDir}">
+       </java>
+    </target>
+
+   <target name="clean"
+         description="clean up" >
+         <delete dir="${jarDir}"/>
+         <delete dir="${binDir}"/>
+   </target>
+</project>

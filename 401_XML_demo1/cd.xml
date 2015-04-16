@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE collectie [
+<!ELEMENT collectie (eigenaar,cd+)>
+<!ELEMENT eigenaar (#PCDATA)>
+<!ELEMENT cd (artiest,titel,jaar,uitgeleend?,lener?)>
+<!ELEMENT artiest (#PCDATA)>
+<!ELEMENT titel (#PCDATA)>
+<!ELEMENT jaar (#PCDATA)>
+<!ELEMENT lener (#PCDATA)>
+]>
+
+<collectie>
+  <eigenaar>Piet</eigenaar>
+  <cd>	
+    <artiest>Henk</artiest>
+	<titel>HELP</titel>
+	<jaar>1990</jaar>
+	<lener>Jan</lener>
+  </cd>
+
+  <cd>
+	<artiest>Frits</artiest>
+	<titel>Goodbye</titel>
+	<jaar>2002</jaar>
+	<uitgeleend>nee</uitgeleend>
+  </cd>
+</collectie>
+

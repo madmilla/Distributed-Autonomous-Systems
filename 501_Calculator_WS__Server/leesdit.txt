@@ -1,0 +1,12 @@
+1. Voeg toe in src: package calcws
+2. Voeg toe in package calcws: Calculator.java
+3. Voeg toe in src: package server
+4. Voeg toe in package server: CalculatorServer.java
+5. ant build.xml (gebruikt calcws.Calculator.class )
+
+Resultaat: (te zien in Navigator na refresh)
+- bin: in package calcws in package jaxws toegevoegd met class-files
+- src: in package calcws in package jaxws toegevoegd met java-files
+- resources: een wsdl-bestand en een xsd-bestand is toegevoegd 
+
+6. java CalculatorServer

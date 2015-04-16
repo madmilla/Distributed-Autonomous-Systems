@@ -1,0 +1,7 @@
+<!ELEMENT Personnel (Employee+)>
+<!ELEMENT Employee (Name,Id,Age)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Id (#PCDATA)>
+<!ELEMENT Age (#PCDATA)>
+
+<!ATTLIST Employee type CDATA #REQUIRED>

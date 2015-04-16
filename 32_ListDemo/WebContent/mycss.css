@@ -1,0 +1,13 @@
+#centeredcontent {
+	text-align: center
+}
+
+body {
+text-align: left;
+background-color: #ccccff;
+} 
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+}

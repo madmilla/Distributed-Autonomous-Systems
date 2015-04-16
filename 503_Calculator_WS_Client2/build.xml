@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="client" default="import" basedir=".">
+	<property file="client.properties" />
+	<property name="srcDir" location="src" />
+	<property name="binDir" location="bin" />
+
+	<target name="import">
+		<mkdir dir="${binDir}" />
+		<exec executable="wsimport">
+			<arg value="-verbose" />
+			<arg value="-keep" />
+			<arg value="-d" />
+			<arg value="${binDir}" />
+			<arg value="-s" />
+			<arg value="${srcDir}" />
+			<arg value="${wsdl_uri}" />
+		</exec>
+	</target>
+
+	<target name="compile" description="compile the source ">
+		<!-- Compile the java code from ${srcDir} -->
+		<mkdir dir="${binDir}" />
+		<javac srcdir="${srcDir}" includeantruntime="false" destdir="${binDir}" debug="true">
+			<include name="**/*.java" />
+		</javac>
+	</target>
+
+	<target name="run" depends="compile">
+		<java classname="${client}" fork="true" classpath="${binDir}">
+		</java>
+	</target>
+	
+	<target name="clean" description="clean up">
+		<delete dir="${binDir}" />
+	</target>
+</project>
+

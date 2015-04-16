@@ -1,0 +1,65 @@
+<project name="tomcat-build" default="build" basedir=".">
+
+   <!-- "tomcat-build.properties" bevat property "tomcat.server" -->
+   
+   <property file="tomcat-build.properties"/>  
+ 
+   <property name="deployDir" value="${tomcat.server}/webapps"/>
+
+   <property name="src" value="${basedir}/src"/>
+
+   <property name="buildDir" value="${basedir}/build"/>
+   <property name="warDir" value="${buildDir}/war"/>
+   <property name="classDir" value="${buildDir}/classes"/>
+   
+   <basename property="baseName" file="${basedir}"/> 
+   <property name="warFile" value="${baseName}.war"/>
+
+   <target name="init">
+      <delete dir="${buildDir}"/>
+      <mkdir dir="${warDir}"/>
+      <mkdir dir="${classDir}"/>     
+   </target>
+
+   <path id="classpath">
+      <fileset dir="${tomcat.server}/lib">
+        <include name="**/*.jar"/>
+      </fileset>
+   </path>
+
+   <target name="compile" depends="init" >
+      <javac srcdir="src" includeantruntime = "false" 
+	                      destdir="${classDir}" 
+						  debug="true">
+         <include name="**/*.java" />
+         <classpath refid="classpath"/>
+      </javac>
+   </target>
+
+   <target name="build" depends="compile">
+      <copy todir="${warDir}">
+         <fileset dir="${basedir}/WebContent"  /> 
+      </copy>
+
+      <copy todir="${warDir}/WEB-INF/classes">
+         <fileset dir="${classDir}" /> 
+      </copy>
+
+   </target>
+
+   <target name="deploy" depends="build">
+      <copy todir="${deployDir}/${baseName}">
+         <fileset dir="${warDir}"  /> 
+      </copy>
+   </target>
+ 
+   <target name="undeploy" >
+      <delete dir="${deployDir}/${baseName}" />
+   </target> 
+
+   <target name="clean" >
+      <delete dir="${buildDir}"/>
+   </target>
+
+</project>
+

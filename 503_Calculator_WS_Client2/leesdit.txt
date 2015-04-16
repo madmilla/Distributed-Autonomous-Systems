@@ -1,0 +1,11 @@
+1. Stel tcp/ip monitor in: Local monitoring port: 8181, Host name: localhost, Port: 9191
+   (Window, Preferences, Run/Debug, TCP/IP Monitor )
+2. ant build.xml (gebruikt resources\saved.wsdl )
+
+Resultaat: (te zien in Navigator na refresh)
+- bin: in package calcws zijn class-files toegevoegd
+- src: in package calcws zijn java-files toegevoegd
+
+2. Voeg toe in src: package client
+3. Voeg toe in package client: CalculatorClient.java
+4. java CalculatorClient

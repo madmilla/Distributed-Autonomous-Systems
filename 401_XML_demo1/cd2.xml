@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE collectie SYSTEM "cd2.dtd">
+
+<collectie>
+  <eigenaar>Piet</eigenaar>
+  <cd>	
+    <artiest>Henk</artiest>
+	<titel>HELP</titel>
+	<jaar>1990</jaar>
+	<lener>Jan</lener>
+  </cd>
+
+  <cd>
+	<artiest>Frits</artiest>
+	<titel>Goodbye</titel>
+	<jaar>2002</jaar>
+	<uitgeleend>nee</uitgeleend>
+  </cd>
+</collectie>
+
