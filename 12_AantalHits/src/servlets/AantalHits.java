@@ -31,30 +31,30 @@ public class AantalHits extends HttpServlet
   }
    
   public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
-    response.setContentType("text/html");
-    PrintWriter out = response.getWriter();
+  response.setContentType("text/html");
+  PrintWriter out = response.getWriter();
 
-    String s1 =
-    "<html>\n" +
-    "   <head>\n" +
-    "       <title>\n" +
-    "          Aantal hits page\n" +
-    "       </title>\n" +
-    "   </head>\n" +
-    "   <body bgcolor=\"#8AAFED\">\n" +
-    "      <center>\n" +
-    "         <h1>\n";
+  String s1 =
+  "<html>\n" +
+  "   <head>\n" +
+  "       <title>\n" +
+  "          Aantal hits page\n" +
+  "       </title>\n" +
+  "   </head>\n" +
+  "   <body bgcolor=\"#8AAFED\">\n" +
+  "      <center>\n" +
+  "         <h1>\n";
 
-    String s2 = "";
-    synchronized(this){
+  String s2 = "";
+  synchronized(this){
     s2 ="            Aantal hits: " + ++aantal + "\n";
-    }
-    String s3 =
-    "         </h1>\n" +
-    "      </center>\n" +
-    "   </body>\n" +
-    "</html>\n";
-    out.print(s1+s2+s3);
+  }
+  String s3 =
+  "         </h1>\n" +
+  "      </center>\n" +
+  "   </body>\n" +
+  "</html>\n";
+  out.print(s1+s2+s3);
   }
 }
 
